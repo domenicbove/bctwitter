@@ -1,11 +1,14 @@
 class TweetsController < ApplicationController
 
-	#make a bunch of objects 
-
+	# Relates to new.html.erb file
+	# This controller relates to that view
+	# new creates instance of Tweet.rb (model)
 	def new
 		@tweet = Tweet.new
 	end
 
+	# Creates a "tweet"
+	# Renders 'new'.html.erb page
 	def create
 		@tweet = Tweet.create(tweet_params)
 		flash.now[:success] = "Tweet Created"
@@ -14,8 +17,10 @@ class TweetsController < ApplicationController
 
 	private
 
+	# Must sanitize what's incoming in tweets
+	# Tweet must be part of params hash,
+	# Then only permit content (avoids bad inputs)
 	def tweet_params
 		params.require(:tweet).permit(:content)
 	end
-
 end
