@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
+gem 'twitter-text', '~> 1.10.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
