@@ -1,5 +1,5 @@
 <ul>
 	<% @tweets.each do |tweet| %>
-		<li><%= tweet.content %></li>
+		<li><%= tweet.user.email %>: <%=tweet.content %></li>
 	<% end %>
 </ul>
