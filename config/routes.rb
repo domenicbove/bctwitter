@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :tweets
   devise_for :users
 
+  resources :profiles
+  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
